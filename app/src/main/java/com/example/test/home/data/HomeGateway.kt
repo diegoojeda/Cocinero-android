@@ -5,7 +5,7 @@ import retrofit2.http.GET
 
 interface HomeGateway {
 
-  @GET("/getHome")
+  @GET("/home")
   suspend fun getHome(): List<HomeRecipe>
 
 }

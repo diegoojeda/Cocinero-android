@@ -26,9 +26,13 @@ android {
     }
   }
 
+  packagingOptions {
+    exclude 'META-INF/*'
+  }
+
   productFlavors {
     local {
-      buildConfigField "String", 'BASE_URL', '"https://127.0.0.1"'
+      buildConfigField "String", 'BASE_URL', '"http://127.0.0.1:8080"'
     }
   }
 
@@ -49,6 +53,7 @@ android {
 }
 
 dependencies {
+  implementation project(":ktorserver")
   implementation fileTree(dir: 'libs', include: ['*.jar'])
   implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
   implementation 'androidx.appcompat:appcompat:1.1.0'
@@ -76,6 +81,7 @@ dependencies {
   //Retrofit
   implementation("com.squareup.okhttp3:logging-interceptor:4.7.2")
   implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+  implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
 
   testImplementation 'junit:junit:4.12'
   androidTestImplementation 'androidx.test.ext:junit:1.1.1'

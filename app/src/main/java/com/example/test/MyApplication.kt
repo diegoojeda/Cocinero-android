@@ -1,6 +1,7 @@
 package com.example.test
 
 import android.app.Application
+import com.example.ktorserver.FakeServer
 import com.example.test.home.homeModules
 import com.example.test.notifications.notificationsModules
 import com.example.test.search.searchModules
@@ -11,6 +12,7 @@ import org.koin.core.qualifier.named
 import org.koin.dsl.module
 import org.koin.java.KoinJavaComponent.get
 import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
 
 class MyApplication : Application() {
@@ -20,12 +22,13 @@ class MyApplication : Application() {
       printLogger()
       modules(koinModules)
     }
+    FakeServer.start()
   }
 }
 
 val okHttpModule = module {
 
-  single {
+  single(named<HttpLoggingInterceptor>()) {
     HttpLoggingInterceptor().apply {
       level = HttpLoggingInterceptor.Level.BODY
     }
@@ -46,6 +49,7 @@ val retrofitModule = module {
     Retrofit.Builder()
       .baseUrl(BuildConfig.BASE_URL)
       .client(get())
+      .addConverterFactory(GsonConverterFactory.create())
       .build()
   }
 }
