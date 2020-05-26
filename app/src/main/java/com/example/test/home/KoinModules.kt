@@ -12,9 +12,7 @@ import retrofit2.Retrofit
 
 val homeModules = module {
 
-  single {
-    get<Retrofit>().create(HomeGateway::class.java)
-  }
+  single { get<Retrofit>().create(HomeGateway::class.java) }
 
   singleBy<HomeRepository, NetworkHomeRepository>()
 

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:layout_margin="16dp"
+  android:elevation="4dp"
+  app:cardCornerRadius="4dp">
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+
+    android:layout_height="wrap_content"
+    android:padding="8dp">
+
+    <ImageView
+      android:id="@+id/homeRecipeImage"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:adjustViewBounds="true"
+      android:scaleType="centerCrop"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      tools:src="@tools:sample/backgrounds/scenic" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+      android:id="@+id/homeRecipeCta"
+      android:layout_width="56dp"
+      android:layout_height="56dp"
+      android:backgroundTint="@color/accent"
+      android:src="@drawable/ic_add_black_24dp"
+      app:layout_constraintBottom_toTopOf="@id/homeRecipePublishingDate"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/homeRecipeImage" />
+
+    <TextView
+      android:id="@+id/homeRecipePublishingDate"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:textColor="@color/secondary_text"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/homeRecipeImage"
+      tools:text="Published on: 27 Apr 2019" />
+
+    <TextView
+      android:id="@+id/homeRecipeName"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:textColor="@color/primary_text"
+      android:textSize="24sp"
+      android:textStyle="bold"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/homeRecipePublishingDate"
+      tools:text="POLLO AL LIMÓN" />
+
+    <TextView
+      android:id="@+id/homeRecipeDescription"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:ellipsize="end"
+      android:maxLines="3"
+      android:textColor="@color/secondary_text"
+      android:textSize="16sp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/homeRecipeName"
+      tools:text="@tools:sample/lorem/random" />
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

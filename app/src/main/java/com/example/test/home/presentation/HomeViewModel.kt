@@ -1,6 +1,5 @@
 package com.example.test.home.presentation
 
-import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -17,6 +16,10 @@ class HomeViewModel(private val homeService: HomeService) : ViewModel() {
     launch {
       _homeFeed.value = homeService.getHome()
     }
+  }
+
+  fun addToFav(id: String) {
+
   }
 
 }
