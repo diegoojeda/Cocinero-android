@@ -1,0 +1,20 @@
+package com.example.test.search
+
+import android.os.Bundle
+import android.view.View
+import androidx.fragment.app.Fragment
+import androidx.lifecycle.observe
+import com.example.test.R
+import org.koin.android.viewmodel.ext.android.viewModel
+
+class SearchFragment : Fragment(R.layout.fragment_search) {
+
+  private val searchViewModel: SearchViewModel by viewModel()
+
+  override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+    super.onViewCreated(view, savedInstanceState)
+    searchViewModel.text.observe(viewLifecycleOwner) {
+
+    }
+  }
+}
