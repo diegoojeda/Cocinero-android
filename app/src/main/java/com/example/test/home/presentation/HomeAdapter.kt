@@ -26,7 +26,7 @@ class HomeAdapter(
 
   inner class HomeViewHolder(private val view: View) : RecyclerView.ViewHolder(view) {
     fun bind(homeRecipe: HomeRecipe) {
-      Picasso.get().load(homeRecipe.imageUrl).into(view.homeRecipeImage)
+      Picasso.get().load(homeRecipe.imageUrl).placeholder(R.drawable.ic_image_black_24dp).into(view.homeRecipeImage)
       view.homeRecipeName.text = homeRecipe.name
       view.homeRecipeDescription.text = homeRecipe.shortDescription
       view.homeRecipeCta.setOnClickListener {

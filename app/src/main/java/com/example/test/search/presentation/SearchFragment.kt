@@ -1,4 +1,4 @@
-package com.example.test.search
+package com.example.test.search.presentation
 
 import android.os.Bundle
 import android.view.View

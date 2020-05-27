@@ -1,4 +1,4 @@
-package com.example.test.search
+package com.example.test.search.presentation
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

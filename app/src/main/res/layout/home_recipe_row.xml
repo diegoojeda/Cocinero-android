@@ -14,7 +14,7 @@
     android:layout_height="wrap_content"
     android:padding="8dp">
 
-    <ImageView
+    <androidx.appcompat.widget.AppCompatImageView
       android:id="@+id/homeRecipeImage"
       android:layout_width="0dp"
       android:layout_height="wrap_content"
@@ -23,7 +23,7 @@
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toTopOf="parent"
-      tools:src="@tools:sample/backgrounds/scenic" />
+      tools:src="@tools:sample/backgrounds/scenic"/>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
       android:id="@+id/homeRecipeCta"
