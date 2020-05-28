@@ -3,11 +3,10 @@ package com.example.test.search.presentation
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.liveData
 
-class SearchViewModel : ViewModel() {
+class SearchViewModel(val searchService: SearchService) : ViewModel() {
 
-  private val _text = MutableLiveData<String>().apply {
-    value = "This is dashboard Fragment"
-  }
-  val text: LiveData<String> = _text
+  val searchData = liveData<List<>> {  }
+
 }
