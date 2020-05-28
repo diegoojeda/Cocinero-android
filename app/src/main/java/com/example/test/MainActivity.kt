@@ -17,6 +17,8 @@ class MainActivity : AppCompatActivity() {
     super.onCreate(savedInstanceState)
     setContentView(R.layout.activity_main)
 
+    supportActionBar?.setShowHideAnimationEnabled(false)
+
     if (savedInstanceState == null) {
       setupBottomNavigationBar()
     } // Else, need to wait for onRestoreInstanceState
@@ -28,7 +30,9 @@ class MainActivity : AppCompatActivity() {
     val navGraphIds = listOf(
       R.navigation.navigation_home,
       R.navigation.navigation_search,
-      R.navigation.navigation_notifications)
+      R.navigation.navigation_notifications,
+      R.navigation.navigation_author
+    )
     val controller = navView.setupWithNavController(
       navGraphIds = navGraphIds,
       fragmentManager = supportFragmentManager,
@@ -37,7 +41,7 @@ class MainActivity : AppCompatActivity() {
     )
 
     controller.observe(this, Observer { navController ->
-      setupActionBarWithNavController(navController)
+//      setupActionBarWithNavController(navController)//FIXME
     })
 
     currentNavController = controller

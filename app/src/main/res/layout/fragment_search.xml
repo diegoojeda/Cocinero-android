@@ -5,6 +5,15 @@
   android:layout_width="match_parent"
   android:layout_height="match_parent">
 
+  <androidx.appcompat.widget.Toolbar
+    android:background="@color/primary"
+    app:title="SEAAAARCH"
+    android:id="@+id/searchToolbar"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
   <EditText
     android:id="@+id/searchInputEt"
     android:layout_width="match_parent"
@@ -12,7 +21,7 @@
     android:hint="Type something…"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent" />
+    app:layout_constraintTop_toBottomOf="@id/searchToolbar" />
 
   <androidx.recyclerview.widget.RecyclerView
     android:layout_width="match_parent"

@@ -26,6 +26,10 @@ android {
     }
   }
 
+  lintOptions {
+    disable 'RestrictedApi'
+  }
+
   packagingOptions {
     exclude 'META-INF/*'
   }
@@ -66,9 +70,11 @@ dependencies {
   implementation 'androidx.navigation:navigation-fragment-ktx:2.2.2'
   implementation 'androidx.navigation:navigation-ui-ktx:2.2.2'
 
-  implementation "androidx.navigation:navigation-runtime-ktx:2.3.0-alpha01"
-  implementation "androidx.navigation:navigation-fragment-ktx:2.3.0-alpha01"
-  implementation "androidx.navigation:navigation-ui-ktx:2.3.0-alpha01"
+  implementation "androidx.navigation:navigation-runtime-ktx:2.3.0-beta01"
+  implementation "androidx.navigation:navigation-fragment-ktx:2.3.0-beta01"
+  implementation "androidx.navigation:navigation-ui-ktx:2.3.0-beta01"
+
+  implementation 'androidx.constraintlayout:constraintlayout:2.0.0-beta6'
 
 
   // For Lifecycle, ViewModel and LiveData
