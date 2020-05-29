@@ -1,6 +1,5 @@
 package com.example.ktorserver
 
-import com.thedeanda.lorem.LoremIpsum
 import io.ktor.application.Application
 import io.ktor.application.call
 import io.ktor.application.install
@@ -15,10 +14,8 @@ import io.ktor.server.engine.embeddedServer
 import io.ktor.server.netty.Netty
 import io.netty.util.internal.logging.InternalLoggerFactory
 import io.netty.util.internal.logging.JdkLoggerFactory
-import java.util.*
-import kotlin.random.Random
-
-private val loremGenerator = LoremIpsum.getInstance()
+import org.apache.commons.io.IOUtils
+import java.nio.charset.Charset
 
 internal fun main() {
   FakeServer.start()
@@ -33,27 +30,29 @@ object FakeServer {
 
 private fun Application.module() {
   install(DefaultHeaders)
-  install(ContentNegotiation) { gson() }
+  install(ContentNegotiation) {
+    gson {
+      setPrettyPrinting()
+      disableHtmlEscaping()
+    }
+  }
   install(Routing) {
     get("/status") {
       call.respond(HttpStatusCode.OK)
     }
     get("/home") {
-      call.respond(List(10) {
-        recipe
-      })
+      call.respond(getFileAsString("/HomeResponse.json"))
+    }
+    get("/recipes/{id}") {
+      call.respond(HttpStatusCode.OK, getFileAsString("/FullRecipeResponse.json"))
     }
   }
 }
 
-
-val recipe
-  get() = HomeRecipe(
-    UUID.randomUUID().toString(),
-    loremGenerator.getTitle(2, 5),
-    loremGenerator.getWords(5, 20),
-    "https://api.adorable.io/avatars/${Random.nextInt(0, 100)}"
-  )
+fun getFileAsString(path: String) = IOUtils.toString(
+  FakeServer::class.java.getResourceAsStream(path),
+  Charset.forName("UTF-8")
+).replace("/\\n/g", "")
 
 data class HomeRecipe(
   val id: String,

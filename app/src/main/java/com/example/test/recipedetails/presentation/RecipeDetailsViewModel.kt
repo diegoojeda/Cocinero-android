@@ -1,13 +1,13 @@
 package com.example.test.recipedetails.presentation
 
 import androidx.lifecycle.ViewModel
-import com.example.test.extensions.launch
+import androidx.lifecycle.liveData
+import com.example.test.recipedetails.domain.RecipeDetailsService
 
-class RecipeDetailsViewModel: ViewModel() {
+class RecipeDetailsViewModel(
+  private val recipeId: String,
+  private val recipeDetailsService: RecipeDetailsService
+) : ViewModel() {
 
-  init {
-    launch {
-
-    }
-  }
+  val fullRecipe = liveData { emit(recipeDetailsService.getRecipeDetails(recipeId)) }
 }

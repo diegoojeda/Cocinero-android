@@ -1,0 +1,30 @@
+{
+  "id": "1234-1234-1234-1234",
+  "name": "Croquetas de pollo",
+  "publishingDate": "2020-04-17",
+  "shortDescription": "Croquetas de pollo muy ricas y muy ligeras. Esta receta ha pasado de familia en familia",
+  "imageUrl": "https://picsum.photos/300/200",
+  "difficulty": 4,
+  "lengthMinutes": 120,
+  "author": {
+    "id": "12341241234-12341234-1234",
+    "name": "Paco Pepe",
+    "profilePic": "https://api.adorable.io/avatars/39"
+  },
+  "steps": [
+    "Calienta la mantequilla",
+    "Cocina la harina",
+    "Añade la leche poco a poco",
+    "Echa el pollo",
+    "Deja enfriar toda la noche",
+    "Forma las croquetas y empanalas",
+    "Frielas y a gozar como un gorrino en una charca de heces"
+  ],
+  "ingredients": [
+    "Leche",
+    "Mantequilla",
+    "Harina",
+    "Pollo",
+    "Paciencia"
+  ]
+}

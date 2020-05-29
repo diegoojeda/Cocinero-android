@@ -5,6 +5,17 @@ plugins {
 
 ext.ktor_version = "1.2.4"
 
+sourceSets {
+  main {
+    java {
+      srcDirs = ["src/main/java"]
+    }
+    resources {
+      srcDirs = ["src/main/res"]
+    }
+  }
+}
+
 dependencies {
   implementation fileTree(dir: 'libs', include: ['*.jar'])
   implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
@@ -14,6 +25,7 @@ dependencies {
   implementation "io.ktor:ktor-client-serialization-jvm:$ktor_version"
   implementation "com.thedeanda:lorem:2.1"
   implementation "ch.qos.logback:logback-classic:1.2.3"
+  implementation("commons-io:commons-io:2.7")
 
   testImplementation "junit:junit:4.12"
 }

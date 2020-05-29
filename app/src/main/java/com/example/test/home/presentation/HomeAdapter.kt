@@ -11,7 +11,7 @@ import kotlinx.android.synthetic.main.home_recipe_row.view.*
 import kotlin.properties.Delegates
 
 class HomeAdapter(
-//  private val addClicked: (recipeId: String) -> Unit
+  private val cardClicked: (recipeId: String) -> Unit
 ) : RecyclerView.Adapter<HomeAdapter.HomeViewHolder>() {
 
   var items: List<HomeRecipe> by Delegates.observable(emptyList()) { _, _, _ -> notifyDataSetChanged() }
@@ -29,9 +29,8 @@ class HomeAdapter(
       Picasso.get().load(homeRecipe.imageUrl).placeholder(R.drawable.ic_image_black_24dp).into(view.homeRecipeImage)
       view.homeRecipeName.text = homeRecipe.name
       view.homeRecipeDescription.text = homeRecipe.shortDescription
-      view.homeRecipeCta.setOnClickListener {
-//        addClicked(homeRecipe.id)
-      }
+      view.setOnClickListener { cardClicked(homeRecipe.id) }
+      view.homeRecipeCta.setOnClickListener { /*addClicked(homeRecipe.id)*/ }
     }
   }
 }
