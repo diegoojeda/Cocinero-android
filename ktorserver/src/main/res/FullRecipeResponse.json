@@ -3,7 +3,7 @@
   "name": "Croquetas de pollo",
   "publishingDate": "2020-04-17",
   "shortDescription": "Croquetas de pollo muy ricas y muy ligeras. Esta receta ha pasado de familia en familia",
-  "imageUrl": "https://picsum.photos/300/200",
+  "imageUrl": "https://picsum.photos/200/400",
   "difficulty": 4,
   "lengthMinutes": 120,
   "author": {
@@ -21,10 +21,165 @@
     "Frielas y a gozar como un gorrino en una charca de heces"
   ],
   "ingredients": [
-    "Leche",
-    "Mantequilla",
-    "Harina",
-    "Pollo",
-    "Paciencia"
+    {
+      "ingredient": {
+        "id": "id1",
+        "name": "harina"
+      },
+      "amount": 400,
+      "unit": "gr"
+    },
+    {
+      "ingredient": {
+        "id": "id2",
+        "name": "pollo"
+      },
+      "amount": 500,
+      "unit": "gr"
+    },
+    {
+      "ingredient": {
+        "id": "id3",
+        "name": "Leche"
+      },
+      "amount": 250,
+      "unit": "ml"
+    },
+    {
+      "ingredient": {
+        "id": "id4",
+        "name": "Huevo"
+      },
+      "amount": 3,
+      "unit": "units"
+    },
+    {
+      "ingredient": {
+        "id": "id5",
+        "name": "patatas"
+      },
+      "amount": 5,
+      "unit": "units"
+    },
+    {
+      "ingredient": {
+        "id": "id1",
+        "name": "harina"
+      },
+      "amount": 400,
+      "unit": "gr"
+    },
+    {
+      "ingredient": {
+        "id": "id2",
+        "name": "pollo"
+      },
+      "amount": 500,
+      "unit": "gr"
+    },
+    {
+      "ingredient": {
+        "id": "id3",
+        "name": "Leche"
+      },
+      "amount": 250,
+      "unit": "ml"
+    },
+    {
+      "ingredient": {
+        "id": "id4",
+        "name": "Huevo"
+      },
+      "amount": 3,
+      "unit": "units"
+    },
+    {
+      "ingredient": {
+        "id": "id5",
+        "name": "patatas"
+      },
+      "amount": 5,
+      "unit": "units"
+    },
+    {
+      "ingredient": {
+        "id": "id1",
+        "name": "harina"
+      },
+      "amount": 400,
+      "unit": "gr"
+    },
+    {
+      "ingredient": {
+        "id": "id2",
+        "name": "pollo"
+      },
+      "amount": 500,
+      "unit": "gr"
+    },
+    {
+      "ingredient": {
+        "id": "id3",
+        "name": "Leche"
+      },
+      "amount": 250,
+      "unit": "ml"
+    },
+    {
+      "ingredient": {
+        "id": "id4",
+        "name": "Huevo"
+      },
+      "amount": 3,
+      "unit": "units"
+    },
+    {
+      "ingredient": {
+        "id": "id5",
+        "name": "patatas"
+      },
+      "amount": 5,
+      "unit": "units"
+    },
+    {
+      "ingredient": {
+        "id": "id1",
+        "name": "harina"
+      },
+      "amount": 400,
+      "unit": "gr"
+    },
+    {
+      "ingredient": {
+        "id": "id2",
+        "name": "pollo"
+      },
+      "amount": 500,
+      "unit": "gr"
+    },
+    {
+      "ingredient": {
+        "id": "id3",
+        "name": "Leche"
+      },
+      "amount": 250,
+      "unit": "ml"
+    },
+    {
+      "ingredient": {
+        "id": "id4",
+        "name": "Huevo"
+      },
+      "amount": 3,
+      "unit": "units"
+    },
+    {
+      "ingredient": {
+        "id": "id5",
+        "name": "patatas"
+      },
+      "amount": 5,
+      "unit": "units"
+    }
   ]
 }

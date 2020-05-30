@@ -1,6 +1,7 @@
 package com.example.test.recipedetails.domain
 
 import com.example.test.author.domain.AuthorShort
+import com.example.test.ingredient.domain.SimpleIngredient
 import org.threeten.bp.LocalDate
 
 data class FullRecipe(
@@ -13,5 +14,11 @@ data class FullRecipe(
   val lengthMinutes: Int,
   val author: AuthorShort,
   val steps: List<String>,
-  val ingredients: List<String>
+  val ingredients: List<IngredientWithAmount>
+)
+
+data class IngredientWithAmount(
+  val ingredient: SimpleIngredient,
+  val amount: Int,
+  val unit: String
 )

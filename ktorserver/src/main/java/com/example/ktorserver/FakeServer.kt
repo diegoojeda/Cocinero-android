@@ -52,7 +52,7 @@ private fun Application.module() {
 fun getFileAsString(path: String) = IOUtils.toString(
   FakeServer::class.java.getResourceAsStream(path),
   Charset.forName("UTF-8")
-).replace("/\\n/g", "")
+)
 
 data class HomeRecipe(
   val id: String,
