@@ -26,10 +26,14 @@ class RecipeDetailsFragment : Fragment(R.layout.fragment_recipe_details) {
     (activity as? AppCompatActivity)?.actionBar?.setDisplayHomeAsUpEnabled(true)
     recipeDetailsRv.adapter = ingredientsAdapter
     viewModel.fullRecipe.observe(viewLifecycleOwner) {
+
+      (activity as? AppCompatActivity)?.actionBar?.title = it.name
+
       Picasso.get().load(it.author.profilePic).transform(CircleTransform).into(recipeDetailsAuthorIv)
       recipeDetailsAuthorName.text = it.author.name
 
       recipeDetailsNameTv.text = it.name
+      recipeDetailsDescriptionTv.text = it.shortDescription
       Picasso.get().load(it.imageUrl).into(recipeDetailsIv)
       ingredientsAdapter.items = it.ingredients
     }

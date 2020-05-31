@@ -22,7 +22,6 @@ class IngredientsAdapter : RecyclerView.Adapter<IngredientsAdapter.IngredientVie
 
   inner class IngredientViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
     fun bind(item: IngredientWithAmount) {
-      itemView.setOnClickListener { itemView.ingredientRowCheck.toggle() }
       itemView.ingredientRowName.text = item.ingredient.name
       itemView.ingredientRowAmount.text = "${item.amount} ${item.unit}"
     }

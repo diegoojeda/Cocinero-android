@@ -9,12 +9,14 @@
     android:id="@+id/recipeDetailsRv"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:orientation="vertical"
     android:overScrollMode="never"
-    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toBottomOf="@id/recipeDetailsIv"
+    app:spanCount="3"
     tools:itemCount="15"
     tools:listitem="@layout/recipe_details_ingredient_row" />
 
@@ -32,85 +34,109 @@
       app:expandedTitleGravity="top"
       app:expandedTitleMarginStart="16dp"
       app:expandedTitleMarginTop="8dp"
-      app:layout_scrollFlags="scroll|exitUntilCollapsed">
+      app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
 
-      <ImageView
-        android:id="@+id/recipeDetailsIv"
+      <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="450dp"
-        android:adjustViewBounds="true"
-        android:scaleType="centerCrop"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:src="@tools:sample/backgrounds/scenic" />
+        android:layout_height="wrap_content">
 
-      <View
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#88000000" />
+        <ImageView
+          android:id="@+id/recipeDetailsIv"
+          android:layout_width="match_parent"
+          android:layout_height="450dp"
+          android:adjustViewBounds="true"
+          android:scaleType="centerCrop"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent"
+          tools:src="@tools:sample/backgrounds/scenic" />
 
-      <TextView
-        android:id="@+id/recipeDetailsNameTv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:paddingStart="24dp"
-        android:paddingEnd="24dp"
-        android:textAlignment="center"
-        android:textColor="@android:color/white"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        tools:text="Croquetas de pollo con patatas y bla bla bla" />
+        <View
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:background="#88000000"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+          android:id="@+id/recipeDetailsNameTv"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center"
+          android:paddingStart="24dp"
+          android:paddingEnd="24dp"
+          android:textAlignment="center"
+          android:textColor="@android:color/white"
+          android:textSize="25sp"
+          android:textStyle="bold"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent"
+          app:layout_constraintVertical_bias="0.35"
+          tools:text="Croquetas de pollo con patatas y bla bla bla" />
+
+        <TextView
+          android:id="@+id/recipeDetailsDescriptionTv"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="16dp"
+          android:ellipsize="end"
+          android:maxLines="4"
+          android:textAlignment="center"
+          android:textColor="@android:color/white"
+          android:textSize="16sp"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/recipeDetailsNameTv"
+          tools:text="@tools:sample/lorem/random" />
+
+        <ImageView
+          android:id="@+id/recipeDetailsAuthorIv"
+          android:layout_width="32dp"
+          android:layout_height="32dp"
+          android:layout_marginStart="24dp"
+          android:layout_marginTop="24dp"
+          android:src="@drawable/ic_add_circle_outline_black_24dp"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+          android:id="@+id/recipeDetailsAuthorName"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center_vertical"
+          android:layout_marginStart="16dp"
+          android:textColor="@android:color/white"
+          android:textSize="24sp"
+          app:layout_constraintBottom_toBottomOf="@id/recipeDetailsAuthorIv"
+          app:layout_constraintStart_toEndOf="@id/recipeDetailsAuthorIv"
+          app:layout_constraintTop_toTopOf="@id/recipeDetailsAuthorIv"
+          tools:text="Paco Pepe" />
+      </androidx.constraintlayout.widget.ConstraintLayout>
 
       <androidx.appcompat.widget.Toolbar
         android:id="@+id/recipeDetailsToolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         app:layout_collapseMode="pin"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-        tools:title="Paco pepe">
-
-        <LinearLayout
-          android:layout_width="match_parent"
-          android:layout_height="match_parent"
-          android:gravity="center_vertical"
-          android:orientation="horizontal"
-          android:padding="8dp">
-
-          <ImageView
-            android:id="@+id/recipeDetailsAuthorIv"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
-            android:src="@drawable/ic_add_circle_outline_black_24dp" />
-
-          <TextView
-            android:id="@+id/recipeDetailsAuthorName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_marginStart="16dp"
-            android:textColor="@android:color/white"
-            android:textSize="24sp"
-            tools:text="Paco Pepe" />
-
-        </LinearLayout>
-
-      </androidx.appcompat.widget.Toolbar>
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
     </com.google.android.material.appbar.CollapsingToolbarLayout>
 
   </com.google.android.material.appbar.AppBarLayout>
 
   <Button
-    android:foreground="?attr/selectableItemBackground"
     android:id="@+id/recipeDetailsStartCooking"
     android:layout_width="150dp"
     android:layout_height="wrap_content"
     android:layout_gravity="bottom|center_horizontal"
     android:layout_marginBottom="24dp"
     android:background="@drawable/button_rounded_bg"
-    android:text="Start cooking!" />
+    android:foreground="?attr/selectableItemBackground"
+    android:text="Start cooking!"
+    android:textColor="@android:color/white" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

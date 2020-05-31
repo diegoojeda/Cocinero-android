@@ -4,40 +4,40 @@
   xmlns:tools="http://schemas.android.com/tools"
   android:layout_width="match_parent"
   android:layout_height="wrap_content"
-  android:background="?attr/selectableItemBackground"
-  android:padding="16dp">
+  android:layout_margin="4dp"
+  android:background="@color/accent"
+  android:foreground="?attr/selectableItemBackground">
+
+  <ImageView
+    android:id="@+id/ingredientRowIcon"
+    android:layout_width="match_parent"
+    android:layout_height="64dp"
+    android:layout_marginTop="16dp"
+    android:src="@drawable/ic_vegetable"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
 
   <TextView
     android:id="@+id/ingredientRowName"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:padding="4dp"
-    android:textColor="@color/primary_text"
+    android:textColor="@android:color/white"
     android:textSize="16sp"
     android:textStyle="bold"
-    app:layout_constraintEnd_toStartOf="@id/ingredientRowCheck"
-    app:layout_constraintHorizontal_bias="0"
+    app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/ingredientRowIcon"
     tools:text="Carne picada" />
 
   <TextView
     android:id="@+id/ingredientRowAmount"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:textColor="@color/secondary_text"
-    app:layout_constraintEnd_toStartOf="@id/ingredientRowCheck"
-    app:layout_constraintHorizontal_bias="0"
+    android:textColor="@android:color/white"
+    app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toBottomOf="@id/ingredientRowName"
     tools:text="500 gr" />
-
-  <CheckBox
-    android:id="@+id/ingredientRowCheck"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
