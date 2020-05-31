@@ -9,5 +9,11 @@ class RecipeDetailsViewModel(
   private val recipeDetailsService: RecipeDetailsService
 ) : ViewModel() {
 
-  val fullRecipe = liveData { emit(recipeDetailsService.getRecipeDetails(recipeId)) }
+  val fullRecipe = liveData {
+    runCatching {
+      emit(recipeDetailsService.getRecipeDetails(recipeId))
+    }.onFailure {
+      it.printStackTrace()
+    }
+  }
 }

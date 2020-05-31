@@ -23,5 +23,21 @@
     <argument
       android:name="recipeId"
       app:argType="string" />
+
+    <action
+      android:id="@+id/navigation_home_open_recipe_steps"
+      app:destination="@id/navigation_home_recipe_steps" />
+
   </fragment>
+
+  <dialog
+    android:id="@+id/navigation_home_recipe_steps"
+    android:name="com.example.test.recipesteps.presentation.RecipeStepsFragment"
+    tools:layout="@layout/fragment_recipe_steps">
+
+    <argument
+      android:name="recipeSteps"
+      app:argType="com.example.test.recipedetails.presentation.RecipeSteps" />
+
+  </dialog>
 </navigation>

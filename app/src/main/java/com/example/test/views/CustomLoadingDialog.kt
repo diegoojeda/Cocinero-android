@@ -19,7 +19,6 @@ class CustomLoadingDialog(context: Context) : Dialog(context, R.style.FloatingDi
       attributes.gravity = Gravity.CENTER_HORIZONTAL
     }
     window?.attributes = attributes
-//    window?.setBackgroundDrawableResource("#00FFFFF")º
 
     val view = LayoutInflater.from(context).inflate(R.layout.loading_dialog, null)
 
