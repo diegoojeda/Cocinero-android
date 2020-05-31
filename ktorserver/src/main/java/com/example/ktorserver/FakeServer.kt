@@ -14,6 +14,7 @@ import io.ktor.server.engine.embeddedServer
 import io.ktor.server.netty.Netty
 import io.netty.util.internal.logging.InternalLoggerFactory
 import io.netty.util.internal.logging.JdkLoggerFactory
+import kotlinx.coroutines.delay
 import org.apache.commons.io.IOUtils
 import java.nio.charset.Charset
 
@@ -49,7 +50,7 @@ private fun Application.module() {
   }
 }
 
-fun getFileAsString(path: String) = IOUtils.toString(
+private fun getFileAsString(path: String) = IOUtils.toString(
   FakeServer::class.java.getResourceAsStream(path),
   Charset.forName("UTF-8")
 )
