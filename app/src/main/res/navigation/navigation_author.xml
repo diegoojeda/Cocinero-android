@@ -8,6 +8,21 @@
   <fragment
     android:id="@+id/navigation_author"
     android:name="com.example.test.author.presentation.AuthorFragment"
-    tools:layout="@layout/fragment_author" />
+    tools:layout="@layout/fragment_author">
+    <action
+      android:id="@+id/navigate_to_recipe_details"
+      app:destination="@id/navigation_author_to_recipe_details" />
+  </fragment>
+
+  <fragment
+    android:id="@+id/navigation_author_to_recipe_details"
+    android:name="com.example.test.recipedetails.presentation.RecipeDetailsFragment"
+    tools:layout="@layout/fragment_recipe_details">
+
+    <argument
+      android:name="recipeId"
+      app:argType="string" />
+
+  </fragment>
 
 </navigation>

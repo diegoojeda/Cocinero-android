@@ -10,7 +10,9 @@ import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.recipe_simple_row.view.*
 import kotlin.properties.Delegates
 
-class AuthorRecipesAdapter : RecyclerView.Adapter<AuthorRecipesAdapter.AuthorRecipeViewHolder>() {
+class AuthorRecipesAdapter(
+  private val recipeClickedListener: (id: String) -> Unit
+) : RecyclerView.Adapter<AuthorRecipesAdapter.AuthorRecipeViewHolder>() {
 
   var items: List<AuthorShortRecipe> by Delegates.observable(emptyList()) { _, _, _ ->
     notifyDataSetChanged()
@@ -27,6 +29,9 @@ class AuthorRecipesAdapter : RecyclerView.Adapter<AuthorRecipesAdapter.AuthorRec
     fun bind(recipe: AuthorShortRecipe) {
       Picasso.get().load(recipe.imageUrl).into(itemView.recipeSimpleImage)
       itemView.recipeSimpleName.text = recipe.name
+      itemView.setOnClickListener {
+        recipeClickedListener(recipe.id)
+      }
     }
   }
 }
