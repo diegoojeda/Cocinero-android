@@ -7,6 +7,7 @@ import com.example.test.home.homeModule
 import com.example.test.notifications.notificationsModule
 import com.example.test.recipedetails.recipeDetailsModule
 import com.example.test.search.searchModule
+import com.example.test.upload.uploadModule
 import com.google.gson.*
 import com.google.gson.stream.JsonReader
 import com.google.gson.stream.JsonWriter
@@ -77,7 +78,8 @@ val koinModules = listOf(
   searchModule,
   notificationsModule,
   recipeDetailsModule,
-  authorModule
+  authorModule,
+  uploadModule
 )
 
 class LocalDateTypeAdapter : TypeAdapter<LocalDate>() {

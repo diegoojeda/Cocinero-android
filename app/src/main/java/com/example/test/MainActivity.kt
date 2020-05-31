@@ -30,6 +30,7 @@ class MainActivity : AppCompatActivity() {
     val navGraphIds = listOf(
       R.navigation.navigation_home,
       R.navigation.navigation_search,
+      R.navigation.navigation_upload,
       R.navigation.navigation_notifications,
       R.navigation.navigation_author
     )
@@ -41,7 +42,7 @@ class MainActivity : AppCompatActivity() {
     )
 
     controller.observe(this, Observer { navController ->
-//      setupActionBarWithNavController(navController)//FIXME
+      //setupActionBarWithNavController(navController)//FIXME
     })
 
     currentNavController = controller
