@@ -6,10 +6,11 @@ data class AuthorShort(
   val profilePic: String
 )
 
-data class Author (
+data class Author(
   val id: String,
   val name: String,
   val profilePic: String,
   val bio: String,
-  val headerPic: String
+  val headerPic: String,
+  val recipes: List<AuthorShortRecipe>
 )

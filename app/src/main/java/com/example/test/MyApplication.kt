@@ -2,10 +2,11 @@ package com.example.test
 
 import android.app.Application
 import com.example.ktorserver.FakeServer
-import com.example.test.home.homeModules
-import com.example.test.notifications.notificationsModules
-import com.example.test.recipedetails.recipeDetailsKoinModules
-import com.example.test.search.searchModules
+import com.example.test.author.authorModule
+import com.example.test.home.homeModule
+import com.example.test.notifications.notificationsModule
+import com.example.test.recipedetails.recipeDetailsModule
+import com.example.test.search.searchModule
 import com.google.gson.*
 import com.google.gson.stream.JsonReader
 import com.google.gson.stream.JsonWriter
@@ -19,9 +20,7 @@ import org.threeten.bp.LocalDate
 import org.threeten.bp.format.DateTimeFormatter
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import java.lang.reflect.Type
 import java.util.concurrent.TimeUnit
-
 
 class MyApplication : Application() {
   override fun onCreate() {
@@ -74,10 +73,11 @@ val retrofitModule = module {
 val koinModules = listOf(
   retrofitModule,
   okHttpModule,
-  homeModules,
-  searchModules,
-  notificationsModules,
-  recipeDetailsKoinModules
+  homeModule,
+  searchModule,
+  notificationsModule,
+  recipeDetailsModule,
+  authorModule
 )
 
 class LocalDateTypeAdapter : TypeAdapter<LocalDate>() {

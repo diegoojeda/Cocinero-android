@@ -10,7 +10,7 @@ import org.koin.dsl.module
 import org.koin.experimental.builder.singleBy
 import retrofit2.Retrofit
 
-val recipeDetailsKoinModules = module {
+val recipeDetailsModule = module {
 
   single { get<Retrofit>().create(RecipeDetailsGateway::class.java) }
   singleBy<RecipeDetailsRepository, NetworkRecipeDetailsRepository>()

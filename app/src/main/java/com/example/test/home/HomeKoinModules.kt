@@ -10,7 +10,7 @@ import org.koin.dsl.module
 import org.koin.experimental.builder.singleBy
 import retrofit2.Retrofit
 
-val homeModules = module {
+val homeModule = module {
 
   single { get<Retrofit>().create(HomeGateway::class.java) }
 

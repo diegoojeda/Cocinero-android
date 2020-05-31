@@ -47,6 +47,9 @@ private fun Application.module() {
     get("/recipes/{id}") {
       call.respond(HttpStatusCode.OK, getFileAsString("/FullRecipeResponse.json"))
     }
+    get("/author/{id}") {
+      call.respond(HttpStatusCode.OK, getFileAsString("/author/FullAuthorResponse.json"))
+    }
   }
 }
 

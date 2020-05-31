@@ -5,242 +5,16 @@
   android:layout_width="match_parent"
   android:layout_height="match_parent">
 
-  <androidx.core.widget.NestedScrollView
-    android:id="@+id/authorScrollView"
+  <androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/authorRecipesRv"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/white"
     android:overScrollMode="never"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior">
-
-    <LinearLayout
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:orientation="vertical">
-
-      <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TEXT"
-        android:textSize="24sp" />
-
-      <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TEXT"
-        android:textSize="24sp" />
-
-      <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TEXT"
-        android:textSize="24sp" />
-
-      <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TEXT"
-        android:textSize="24sp" />
-
-      <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TEXT"
-        android:textSize="24sp" />
-
-      <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TEXT"
-        android:textSize="24sp" />
-
-      <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TEXT"
-        android:textSize="24sp" />
-
-      <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TEXT"
-        android:textSize="24sp" />
-
-      <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TEXT"
-        android:textSize="24sp" />
-
-      <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TEXT"
-        android:textSize="24sp" />
-
-      <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TEXT"
-        android:textSize="24sp" />
-
-      <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TEXT"
-        android:textSize="24sp" />
-
-      <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TEXT"
-        android:textSize="24sp" />
-
-      <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TEXT"
-        android:textSize="24sp" />
-
-      <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TEXT"
-        android:textSize="24sp" />
-
-      <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TEXT"
-        android:textSize="24sp" />
-
-      <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TEXT"
-        android:textSize="24sp" />
-
-      <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TEXT"
-        android:textSize="24sp" />
-
-      <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TEXT"
-        android:textSize="24sp" />
-
-      <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TEXT"
-        android:textSize="24sp" />
-
-      <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TEXT"
-        android:textSize="24sp" />
-
-      <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TEXT"
-        android:textSize="24sp" />
-
-      <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TEXT"
-        android:textSize="24sp" />
-
-      <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TEXT"
-        android:textSize="24sp" />
-
-      <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TEXT"
-        android:textSize="24sp" />
-
-      <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TEXT"
-        android:textSize="24sp" />
-
-      <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TEXT"
-        android:textSize="24sp" />
-
-      <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TEXT"
-        android:textSize="24sp" />
-
-      <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TEXT"
-        android:textSize="24sp" />
-
-      <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TEXT"
-        android:textSize="24sp" />
-
-      <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TEXT"
-        android:textSize="24sp" />
-
-      <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TEXT"
-        android:textSize="24sp" />
-
-      <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TEXT"
-        android:textSize="24sp" />
-
-      <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TEXT"
-        android:textSize="24sp" />
-
-      <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TEXT"
-        android:textSize="24sp" />
-
-      <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TEXT"
-        android:textSize="24sp" />
-
-      <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TEXT"
-        android:textSize="24sp" />
-    </LinearLayout>
-  </androidx.core.widget.NestedScrollView>
+    app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    app:spanCount="2"
+    tools:itemCount="20"
+    tools:listitem="@layout/recipe_simple_row" />
 
   <com.google.android.material.appbar.AppBarLayout
     android:layout_width="match_parent"
@@ -330,6 +104,23 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/authorAvatarIv"
             tools:text="Perico el de los palotes" />
+
+          <TextView
+            android:id="@+id/authorBioTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="5"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:text="Perico el de los palotes 2"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/authorNameTv"
+            tools:text="@tools:sample/lorem/random" />
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
